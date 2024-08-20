@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Redirect</title>
+    <script type="text/javascript">
+        function randomRedirect() {
+            // List of form URLs
+            var urls = [
+                "https://docs.google.com/forms/d/e/1FAIpQLSc6H2RHtrvIRZ8sztgAubce2Wmd31WtzcH3aCLm1TuXURmz7g/viewform?usp=sf_link",
+                "https://docs.google.com/forms/d/e/1FAIpQLSdxkX6yGxMTz4QmahQOGIIDpNyng3UzUZDKAaqUMW10u2Rw0g/viewform?usp=sf_link"
+            ];
+            // Generate a random index
+            var randomIndex = Math.floor(Math.random() * urls.length);
+            // Redirect to one of the URLs
+            window.location.href = urls[randomIndex];
+        }
+    </script>
+</head>
+<body onload="randomRedirect()">
+    <p>If you're not redirected automatically, <a href="javascript:randomRedirect()">click here</a>.</p>
+</body>
+</html>
